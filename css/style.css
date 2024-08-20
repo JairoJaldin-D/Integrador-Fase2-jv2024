@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Rubik", sans-serif;
+    font-size: 1.2rem;
+    min-height: 100vh;
+    padding: 20px;
+    background-color: #F8F6DA;
+}
+
+.grid-container > * {
+    box-shadow: 10px 6px 37px -13px rgba(51, 51, 51, 0.74);
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    font-weight: 500;
+    
+}
+
+.grid-container {
+    background-color: #F8F6DA;
+    display: grid;
+    gap: 20px;
+    grid-template:
+        "header" 200px
+        "navbar" 50px
+        "main" auto
+        "sidebar" auto
+        "dudas" auto
+        "footer" auto;
+}
+
+
+/* Header */
+.header {
+    grid-area: header;
+    background-color: #AFAF91;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.header img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/**/
+
+/* Navbar */
+.navbar {
+    grid-area: navbar;
+    background-color: #F8F6DA;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-navbar h1{
+    font-size: 2.5rem;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+ul a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.5rem;
+}
+
+/* Sidebar */
+.sidebar {
+    grid-area: sidebar;
+    background-color: #F8F6DA;
+
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+
+
+}
+
+.btn-cotizar{
+    font-size: 2rem;
+    background-color: #AFAF91;
+    border-radius: 0.5rem;
+    border: 0px solid #F8F6DA;
+    padding: 1rem 2rem;
+    margin-top: 1rem;
+}
+
+
+/* Main */
+.main {
+    grid-area: main;
+    background-color: #F8F6DA;
+}
+
+.cards-container {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    background-color: #F8F6DA;
+}
+
+.card {
+    background-color: #AFAF91;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    text-align: center;
+}
+
+
+
+.card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Dudas Section */
+.dudas {
+    grid-area: dudas;
+    background-color: #F8F6DA;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.dudas h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.dudas p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.dudas ul {
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+.dudas li {
+    margin-bottom: 10px;
+    font-size: 1rem;
+
+    color: #AFAF91;
+}
+
+
+
+/* Footer */
+.footer {
+    grid-area: footer;
+    background-color: #CBB688;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 10px;
+    min-width: 200px;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.socials a{
+    color: black;
+}
+
+ul{
+    list-style: none;
+    text-decoration: none;
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+    .grid-container {
+        grid-template:
+            "header header" 200px
+            "navbar navbar" 50px
+            "sidebar main" auto
+            "dudas dudas" auto
+            "footer footer" auto /
+            200px 1fr;
+    }
+}
+
+@media (min-width: 992px) {
+    .grid-container {
+        grid-template: 
+        "header header header" 150px
+        "navbar navbar navbar" 50px
+        "sidebar main main" auto
+        "dudas dudas dudas" auto
+        "footer footer footer" auto /
+        1fr 3fr 1fr;
+    }
+}
