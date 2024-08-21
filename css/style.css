@@ -104,7 +104,18 @@ ul a {
     border: 0px solid #F8F6DA;
     padding: 1rem 2rem;
     margin-top: 1rem;
+
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+
 }
+
+.btn-cotizar:hover{
+    background-color: #9E9E76; 
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
 .sidebar .btn-cotizar a{
     text-decoration: none;
     color: black;
@@ -130,8 +141,17 @@ ul a {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     padding: 20px;
     text-align: center;
+    cursor: pointer;
+
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
+.card:hover{
+    background-color: #9E9E76; 
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+
+}
 
 
 .card h2 {
@@ -143,6 +163,9 @@ ul a {
     font-size: 1rem;
     color: #666;
 }
+
+
+
 
 /* Dudas Section */
 .dudas {
@@ -211,7 +234,7 @@ ul a {
 
 ul{
     list-style: none;
-    
+    text-decoration: none;
 }
 
 /* Responsive */
