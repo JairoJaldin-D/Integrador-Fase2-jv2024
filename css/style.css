@@ -105,7 +105,11 @@ ul a {
     padding: 1rem 2rem;
     margin-top: 1rem;
 }
-
+.sidebar .btn-cotizar a{
+    text-decoration: none;
+    color: black;
+    list-style: none;
+}
 
 /* Main */
 .main {
@@ -202,11 +206,12 @@ ul a {
 
 .socials a{
     color: black;
+    text-decoration: none;
 }
 
 ul{
     list-style: none;
-    text-decoration: none;
+    
 }
 
 /* Responsive */

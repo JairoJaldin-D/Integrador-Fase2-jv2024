@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cotiza</title>
+    <link rel="stylesheet" href="../css/cotiza.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+
+
+  <header class="header">
+    <div class="header-container">
+        <div class="header-left">
+            <img src="../img/logo-house.png" alt="Logo" class="logo">
+        </div>
+        <div class="header-center">
+            <h1>Mi Página de Seguros - Formulario</h1>
+        </div>
+        <div class="header-right">
+            <a href="../html/index.html">Página Principal</a>
+        </div>
+    </div>
+</header>
+
+
+    <form id="cotizadorForm">
+        
+        <label for="tipoPropiedad">Selecciona el tipo de propiedad:</label>
+        <select id="tipoPropiedad" name="tipoPropiedad" required>
+          <option value="hogar">Hogar</option>
+          <option value="comercio">Comercio</option>
+        </select>
+
+        <label for="ubicacion">Selecciona su ubicación:</label>
+        <select id="ubicacion" name="ubicacion" required>
+          <option value="urbana">Urbana</option>
+          <option value="suburbana">Suburbana</option>
+          <option value="rural">Rural</option>
+        </select>
+
+        <label for="tipoConstruccion">Selecciona el tipo de construcción:</label>
+        <select id="tipoConstruccion" name="tipoConstruccion" required>
+          <option value="ladrillo">Ladrillo</option>
+          <option value="madera">Madera</option>
+          <option value="mixta">Mixta</option>
+        </select>
+
+        <label for="metrosCuadrados">Ingresa los metros cuadrados:</label>
+        <input type="number" id="metrosCuadrados" name="metrosCuadrados" required>
+
+        <label for="valorPropiedad">Ingresa el valor de la propiedad (en USD):</label>
+        <input type="number" id="valorPropiedad" name="valorPropiedad" required>
+
+        <label for="antiguedad">Ingresa la antigüedad de la propiedad (en años):</label>
+        <input type="number" id="antiguedad" name="antiguedad" required>
+
+        <label for="seguroIncendio">¿Incluir seguro contra incendios?</label>
+        <input type="checkbox" id="seguroIncendio" name="seguroIncendio">
+
+        <label for="seguroRobo">¿Incluir seguro contra robo?</label>
+        <input type="checkbox" id="seguroRobo" name="seguroRobo">
+
+        <label for="seguroDesastresNaturales">¿Incluir seguro contra desastres naturales?</label>
+        <input type="checkbox" id="seguroDesastresNaturales" name="seguroDesastresNaturales">
+
+        
+        <label for="plomeria">¿Incluir cobertura para plomería?</label>
+        <input type="checkbox" id="plomeria" name="plomeria">
+
+        <label for="gasista">¿Incluir cobertura para gasista?</label>
+        <input type="checkbox" id="gasista" name="gasista">
+
+        <label for="cerrajeria">¿Incluir cobertura para cerrajería?</label>
+        <input type="checkbox" id="cerrajeria" name="cerrajeria">
+        
+        
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="numeroDocumento">Número de Documento:</label>
+        <input type="text" id="numeroDocumento" name="numeroDocumento" required>
+
+        
+        <input type="hidden" id="cotizacionId" name="cotizacionId">
+
+        <button type="submit">COTIZAR</button>
+    </form>
+    
+    <div id="resultadoCotizacion"></div>
+    
+    <script src="../js/index.js"></script>
+
+
+    <footer class="footer">
+      <div class="footer-container">
+          <div class="footer-section">
+              <h2>Acerca de Nosotros</h2>
+              <p>Somos una empresa dedicada a brindar soluciones de seguros personalizadas para proteger tu hogar, tus bienes y tu tranquilidad</p>
+          </div>
+          <div class="footer-section">
+              <h2>Ubicacion</h2>
+              <ul>
+                  <li><p>Argentina</p></li>
+                  <li><p>Buenos Aires, CABA</p></li>
+                  
+              </ul>
+          </div>
+          <div class="footer-section">
+              <h2>Contacto</h2>
+              <p>Email: SegurosJJ@gmail.com</p>
+              <p>Teléfono: +54 11 6144 6143</p>
+              <div class="socials">
+                 <i class="bi bi-facebook"> <a href="#">Facebook</a></i></a>
+                  <i class="bi bi-twitter-x"><a href="#">Twitter</a></i></a>
+                  <i class="bi bi-instagram"><a href="#">Instagram</a></i></a>
+              </div>
+          </div>
+      </div>
+      <div class="footer-bottom">
+          &copy; 2024 SegurosJJ. Todos los derechos reservados.
+      </div>
+  </footer>
+
+
+
+
+
+</body>
+</html>
