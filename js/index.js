@@ -1,7 +1,7 @@
 document.getElementById('cotizadorForm').addEventListener('submit', function(event) {
   event.preventDefault();
 
-  // Obtener los valores del formulario
+  // Los valores formulario
   const tipoPropiedad = document.getElementById('tipoPropiedad').value;
   const ubicacion = document.getElementById('ubicacion').value;
   const tipoConstruccion = document.getElementById('tipoConstruccion').value;
@@ -36,7 +36,7 @@ document.getElementById('cotizadorForm').addEventListener('submit', function(eve
   // Lógica para calcular la póliza
   let costoBase = valorPropiedad * 0.001; // 0.1% del valor de la propiedad
 
-  // Ajuste por ubicación
+  
   switch(ubicacion) {
     case 'urbana':
       costoBase *= 1.2; // Incrementa un 20% si es urbana
@@ -67,14 +67,14 @@ document.getElementById('cotizadorForm').addEventListener('submit', function(eve
       break;
   }
 
-  // Ajuste por antigüedad
+  
   if (antiguedad <= 5) {
     costoBase *= 0.95; // Disminuye un 5% si la propiedad tiene 5 años o menos
   } else if (antiguedad > 30) {
     costoBase *= 1.1; // Incrementa un 10% si la propiedad tiene más de 30 años
   }
 
-  // Ajuste por seguros adicionales
+  
   if (seguroIncendio) {
     costoBase += 200; // Costo  por seguro contra incendios
   }
@@ -87,7 +87,7 @@ document.getElementById('cotizadorForm').addEventListener('submit', function(eve
     costoBase += 250; // Costo por seguro contra desastres naturales
   }
 
-  // Ajuste por coberturas adicionales
+  
   if (plomeria) {
     costoBase += 100; // Costo cobertura de plomería
   }
