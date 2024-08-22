@@ -15,7 +15,6 @@ body {
 }
 
 /* Header */
-/* Header */
 .header {
   grid-area: header;
   background-color: #CBB688;
@@ -93,7 +92,7 @@ button {
   cursor: pointer;
 }
 
-/* API Data Container */
+
 #apiDataContainer {
   margin-top: 20px;
 }
@@ -134,7 +133,7 @@ button {
     color: #666;
   }
   
-  /* Social Media Links */
+
   .socials a {
     color: black;
     text-decoration: none;

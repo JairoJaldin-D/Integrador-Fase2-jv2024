@@ -13,7 +13,7 @@ document.getElementById('fetchDataButton').addEventListener('click', function() 
                 console.log('Datos obtenidos de la API:', data);
                 displayData(data);
                 dataVisible = true;  // Cambiamos el estado de la visibilidad
-                hideButton.style.display = 'inline'; // Mostrar botón de ocultar
+                hideButton.style.display = 'inline'; // Muestra el botón de ocultar
             })
             .catch(error => {
                 console.error('Error al obtener datos de la API:', error);
@@ -29,7 +29,7 @@ document.getElementById('hideDataButton').addEventListener('click', function() {
         // Si los datos son visibles, los ocultamos
         container.innerHTML = '';  // Limpiamos el contenedor
         dataVisible = false;  // Cambiamos el estado de la visibilidad
-        hideButton.style.display = 'none'; // Ocultar botón de ocultar
+        hideButton.style.display = 'none'; // Oculta el botón
     }
 });
 
